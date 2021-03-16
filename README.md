@@ -47,10 +47,6 @@ def ssim(img1, img2):
 
 
 def calculate_ssim(img1, img2):
-    '''calculate SSIM
-    the same outputs as MATLAB's
-    img1, img2: [0, 255]
-    '''
     if not img1.shape == img2.shape:
         raise ValueError('Input images must have the same dimensions.')
     if img1.ndim == 2:
@@ -66,5 +62,5 @@ def calculate_ssim(img1, img2):
     else:
         raise ValueError('Wrong input image dimensions.')
 
-calculate_ssim(output, bicubic_img)
+calculate_ssim(img1, img2)
 ```
